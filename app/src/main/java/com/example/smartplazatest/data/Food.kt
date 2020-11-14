@@ -1,4 +1,4 @@
-package com.example.smartplazatest.data.vo
+package com.example.smartplazatest.data
 
 data class Food(
     val id: Int,
