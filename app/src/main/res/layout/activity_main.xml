@@ -25,7 +25,6 @@
         android:elevation="15dp"
         app:cnb_menuResource="@menu/bottom_navigation_menu"
         >
-
     </com.ismaeldivita.chipnavigation.ChipNavigationBar>
 
 </RelativeLayout>
