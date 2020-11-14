@@ -6,6 +6,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.smartplazatest.R
 import com.example.smartplazatest.networking.Product
+import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.food_item.view.*
 
 class FoodAdapter(
     private val products: List<Product?> = listOf(),
@@ -14,6 +16,9 @@ class FoodAdapter(
 
     inner class FoodViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
         fun bindMessage(product: Product?) {
+            Picasso.with(view.context).load("https://api.smartplaza.kz/mp/products/photos/"+product?.photo_1).into(view.food_image)
+            view.food_name.text = product?.name
+            view.food_price.text = product?.price.toString()
 
         }
     }

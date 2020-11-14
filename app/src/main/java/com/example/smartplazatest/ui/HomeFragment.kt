@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.smartplazatest.R
+import com.example.smartplazatest.adapter.FoodAdapter
 import com.example.smartplazatest.networking.Api
 import com.example.smartplazatest.networking.ApiClient
 import com.example.smartplazatest.networking.ProductResponse
@@ -32,14 +33,16 @@ class HomeFragment : Fragment() {
     override fun onResume() {
         super.onResume()
 
-        food_list.layoutManager = LinearLayoutManager(requireContext())
+        food_list.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,true)
 
         ProductsLoader(
             onSuccess = {
-                
+                food_list.adapter = FoodAdapter(it.productResponses,OnClick = {
+
+                })
             },
             onError = {
-
+                Log.d("Taaag",it.message)
             }
         ).loadProducts()
     }
