@@ -21,11 +21,13 @@
             android:padding="8dp"
             >
             <ImageView
+                android:id="@+id/food_image"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:src="@drawable/_0_970"
                 />
             <TextView
+                android:id="@+id/food_name"
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -36,6 +38,7 @@
                 android:textAlignment="textStart"
                 />
             <TextView
+                android:id="@+id/food_price"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="160 тг"

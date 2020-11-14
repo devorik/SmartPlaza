@@ -6,10 +6,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.smartplazatest.R
 import com.example.smartplazatest.networking.Api
 import com.example.smartplazatest.networking.ApiClient
 import com.example.smartplazatest.networking.ProductResponse
+import com.example.smartplazatest.networking.ProductsLoader
+import kotlinx.android.synthetic.main.fragment_home.*
 import retrofit2.Call
 import retrofit2.Response
 import javax.security.auth.callback.Callback
@@ -29,23 +32,16 @@ class HomeFragment : Fragment() {
     override fun onResume() {
         super.onResume()
 
-        Api.getApiClient()
-            .getAllProducts()
-            .enqueue(object : retrofit2.Callback<ProductResponse>{
-                override fun onResponse(
-                    call: Call<ProductResponse>,
-                    response: Response<ProductResponse>
-                ) {
-                    val productResponse = response.body()
-                    Log.d("taaaag", productResponse.toString())
-                }
+        food_list.layoutManager = LinearLayoutManager(requireContext())
 
-                override fun onFailure(call: Call<ProductResponse>, t: Throwable) {
-                    Log.d("err",t.message)
-                }
+        ProductsLoader(
+            onSuccess = {
+                
+            },
+            onError = {
 
-
-            })
+            }
+        ).loadProducts()
     }
 
 
