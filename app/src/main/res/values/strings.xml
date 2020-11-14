@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">SmartPlazaTest</string>
+    <string name="home_menu_item_title">Home</string>
+    <string name="menu_item_home">Домой</string>
+    <string name="menu_item_wallet">Кошелек</string>
+    <string name="menu_item_qr_code">Сканировать</string>
+    <string name="menu_item_comment">Комменты</string>
+    <string name="menu_item_menu">Меню</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
