@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        actionBar?.hide()
         bottomNavigationView = findViewById(R.id.chipNav)
         if(savedInstanceState == null) {
             handleFrame(HomeFragment())
