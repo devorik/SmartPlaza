@@ -67,6 +67,7 @@
             />
 
         <EditText
+            android:id="@+id/filter_category"
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -85,31 +86,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <ProgressBar
-            android:id="@+id/progress_bar_food"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:visibility="gone"/>
-
-        <TextView
-            android:id="@+id/txt_error_popular"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="Connection Problem!!"
-            android:visibility="gone"/>
-
+        android:orientation="vertical"
+        android:layout_marginBottom="70dp"
+        >
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/food_list"
+            android:id="@+id/category_list"
             android:layout_margin="4dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:scrollbars="horizontal"
             />
     </LinearLayout>
-
-
 </LinearLayout>

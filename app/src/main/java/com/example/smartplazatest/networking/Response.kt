@@ -1,11 +1,12 @@
 package com.example.smartplazatest.networking
 
 data class SuperCategory(
-    val name:String
+        val id: Int,
+    val name:String,
+//        val product: List<Product>
 )
 
 data class Product(
-    val id:Int,
     val name: String,
     val price: Double,
     val superCategory: SuperCategory,

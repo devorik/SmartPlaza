@@ -19,7 +19,6 @@ class FoodAdapter(
             Picasso.with(view.context).load("https://api.smartplaza.kz/mp/products/photos/"+product?.photo_1).into(view.food_image)
             view.food_name.text = product?.name
             view.food_price.text = product?.price.toString()
-
         }
     }
 
